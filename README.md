@@ -6,8 +6,25 @@ To develop a neural network regression model for the given dataset.
 
 ## THEORY
 
-Explain the problem statement
+The class NeuralNet inherits from nn.Module, which is the base class for all neural networks in PyTorch.
 
+In the constructor init, layers and activation functions are defined.
+
+The first layer self.n1=nn.Linear(1,12) takes one input feature and maps it to 12 neurons.
+
+The second layer self.n2=nn.Linear(12,14) processes the 12 outputs and maps them to 14 neurons.
+
+The third layer self.n3=nn.Linear(14,1) reduces the 14 features back to a single output.
+
+The activation function self.relu=nn.ReLU() introduces non-linearity, helping the network learn complex patterns.
+
+A history dictionary is initialized to store the loss values during training for performance tracking.
+
+The forward function defines how input data flows through the network layers.
+
+Input x is first passed through n1 and activated by ReLU, then through n2 with ReLU again.
+
+Finally, the processed data passes through n3 to produce the output, which is returned.
 ## Neural Network Model
 
 <img width="770" height="766" alt="image" src="https://github.com/user-attachments/assets/4aeb2858-739e-4068-9dcb-f3b6ba00b875" />
