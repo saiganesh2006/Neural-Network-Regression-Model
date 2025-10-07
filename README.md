@@ -10,11 +10,11 @@ The class NeuralNet inherits from nn.Module, which is the base class for all neu
 
 In the constructor init, layers and activation functions are defined.
 
-The first layer self.n1=nn.Linear(1,12) takes one input feature and maps it to 12 neurons.
+The first layer self.n1=nn.Linear(1,10) takes one input feature and maps it to 10 neurons.
 
-The second layer self.n2=nn.Linear(12,14) processes the 12 outputs and maps them to 14 neurons.
+The second layer self.n2=nn.Linear(10,20) processes the 12 outputs and maps them to 20 neurons.
 
-The third layer self.n3=nn.Linear(14,1) reduces the 14 features back to a single output.
+The third layer self.n3=nn.Linear(20,1) reduces the 14 features back to a single output.
 
 The activation function self.relu=nn.ReLU() introduces non-linearity, helping the network learn complex patterns.
 
